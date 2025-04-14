@@ -3,7 +3,7 @@
 }
 
 body{
-    color: rgb(95, 49, 49);
+    color: black;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
     margin: 0 auto;
     flex-direction: column;
