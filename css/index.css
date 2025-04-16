@@ -4,6 +4,7 @@ body{
     margin: 0 auto;
     flex-direction: column;
     font-size: 25px;
+    /* background-color: rgb(176, 139, 255); */
 }
 
 header{
@@ -18,6 +19,8 @@ header{
     justify-content: center;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
     position: relative;
+    padding: 0;
+    margin: 0;
 }
 
 header::after {
@@ -33,14 +36,17 @@ header::after {
 
 .second-background {
     background-color: rgb(176, 139, 255);
+    height: 100%;
+}
+
+.texto_second {
+    margin-right: 2%;
+    margin-left: 2%;
+
 }
 
 .flex-linha {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 40px;
-    flex-wrap: wrap;
+    max-width: 100%;
 }
 
 /* .conteudo-em-linha{
@@ -62,6 +68,8 @@ header::after {
     text-align: center;
     width: 280px;
     font-family: 'Optima';
+    float: right;
+    margin-left: 15px;
 }
 
 .album-cover {
@@ -106,8 +114,8 @@ audio {
     display: none;
 }
 
-.bloco-texto {
-    max-width: 700px;
+.bloco_texto {
+    text-align: justify;
 }
 
 .polaroids{
