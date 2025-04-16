@@ -1,19 +1,133 @@
-.first-background {
-    background-image: url("view/desenho_parque_aniv.jpeg");
-}
-
 body{
     color: black;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-family:'Optima';
     margin: 0 auto;
     flex-direction: column;
+    font-size: 25px;
 }
 
 header{
+
+    background-blend-mode: overlay;
+    background-image: url('../view/teste_mural.png');
+    background-size: cover;       /* Faz a imagem cobrir todo o espaço do header */
+    background-position: center;  /* Centraliza a imagem */
+    height: 360px;                /* Altura do cabeçalho */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    position: relative;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to bottom, #4F5061, rgb(176, 139, 255));
+    pointer-events: none;
+}
+
+.second-background {
+    background-color: rgb(176, 139, 255);
+}
+
+.flex-linha {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* .conteudo-em-linha{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 40px;
+    flex-wrap: wrap;
+} */
+
+.music-card {
+    background: linear-gradient(to bottom, #fbe8ff, #e0c6ff);
+    border: 2px dashed #b377e3;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    text-align: center;
+    width: 280px;
+    font-family: 'Optima';
+}
+
+.album-cover {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border: 3px solid #b377e3;
+}
+
+.music-info h4 {
+    margin: 10px 0 5px 0;
+    font-size: 22px;
+    color: #6a329f;
+}
+
+.music-info p {
+    font-size: 16px;
+    color: #444;
+}
+
+#playPauseBtn {
+    background-color: #b377e3;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#playPauseBtn:hover {
+    background-color: #933ddf;
+}
+
+
+audio {
+    display: none;
+}
+
+.bloco-texto {
+    max-width: 700px;
+}
+
+.polaroids{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /*define o espaçamento entre as imagens*/
+    justify-content: center;
+    margin: 95px;
+}
+
+/* efeito ao passar o mouse */
+.polaroids a:hover {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.polaroids img.responsive {
+    width: 320px;
+    height: auto;
+    display: block;
 }
 
 #title{
@@ -24,26 +138,6 @@ header{
 li{
     display: inline-block;
     margin: 20px;
-}
-
-a{
-    color: black;
-}
-
-a:hover{
-    color: rgb(95, 49, 49);
-    transition: 0.3s all;
-}
-
-#inscreva-se-btn{
-    border: 2px solid black;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-#inscreva-se-btn:hover{
-    background-color: rgb(95, 49, 49);
-    color: white;
 }
 
 ul{
@@ -65,7 +159,7 @@ main{
 h2{
     font-size: 56px;
     line-height: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-family: 'Optima';
 }
 
 span{
@@ -75,7 +169,7 @@ span{
 p{
     line-height: 20px;
     max-width: 500px;
-    font-family:'Lucida Sans';
+    font-family:'Optima';
 }
 
 img{
@@ -97,17 +191,6 @@ img{
     }
 
 
-
-.second-background {
-    background-color: rgb(95, 49, 49);
-
-}
-
-.canto {
-    width: 62px;
-    height: 62px;
-}
-
 h4{
     color:black;
 }
@@ -115,22 +198,4 @@ h4{
 
 h3{
     color:black;
-}
-
-
-.minha-bibli{
-    color:black;
-}
-
-
-#verMais {
-    border: 2px solid black;
-    padding: 8px;
-    border-radius: 10px;
-    position:static;
-}
-
-#verMais:hover{
-    background-color: rgb(95, 49, 49);
-    color: white;
 }
