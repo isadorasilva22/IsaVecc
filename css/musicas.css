@@ -1,0 +1,106 @@
+body{
+    width: 100%;
+    height: 175vh;
+    background: linear-gradient(rgba(180, 120, 220, 0.3), rgba(180, 120, 220, 0.3)),
+    url('../fotos/wallpaper-branco.jpeg');  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+.linha-disco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+    gap: 30px;
+    cursor: pointer;
+  }
+  
+  .linha-disco.esquerda {
+    flex-direction: row;
+  }
+  
+  .linha-disco.direita {
+    flex-direction: row-reverse;
+  }
+  
+  .vinil {
+    width: 150px;
+    transition: transform 0.4s ease;
+  }
+  
+  .linha-disco.aberto .vinil {
+    transform: rotate(360deg) scale(0.95);
+  }
+  
+  .conteudo {
+    display: none;
+    background: #fffaf5;
+    padding: 20px;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    font-family: 'Georgia', serif;
+    font-size: 14px;
+    color: #4a2f28;
+  }
+  
+  .conteudo img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .linha-disco.aberto .conteudo {
+    display: block;
+  }
+  
+/* Roda o disco com animação enquanto toca */
+.linha-disco.aberto .vinil {
+    animation: girarDisco 4s linear infinite;
+    transform: scale(0.95);
+    filter: drop-shadow(0 0 8px #d8b0ff);
+  }
+  
+  @keyframes girarDisco {
+    0% {
+      transform: rotate(0deg) scale(0.95);
+    }
+    100% {
+      transform: rotate(360deg) scale(0.95);
+    }
+  }
+  
+  /* Sombra pulsante no contêiner de conteúdo */
+  .linha-disco.aberto .conteudo {
+    display: block;
+    animation: pulsarSombra 2s ease-in-out infinite;
+    transition: all 0.3s ease;
+  }
+  
+  @keyframes pulsarSombra {
+    0%, 100% {
+      box-shadow: 0 0 10px rgba(180, 120, 220, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(180, 120, 220, 0.6);
+    }
+  }
+  
+  /* Suaviza a entrada do conteúdo */
+  .conteudo {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+  
+  .linha-disco.aberto .conteudo {
+    opacity: 1;
+    max-height: 1000px;
+  }
+  
