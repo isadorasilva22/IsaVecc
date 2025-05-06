@@ -4,13 +4,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let isPlaying = false;
 
+    const inicio = 46;
+    const fim = 90;
+    let trechoTimeout;
+
     playBtn.addEventListener("click", function () {
         if (isPlaying) {
             audio.pause();
             playBtn.textContent = "▶️";
+            clearTimeout(trechoTimeout)
         } else {
+            audio.currentTime = inicio;
             audio.play();
             playBtn.textContent = "⏸️";
+
+            const duracao = (fim - inicio) * 1000;
+            trechoTimeout = setTimeout(() =>{
+              audio.pause();
+              playBtn.textContent = "▶️";
+              isPlaying = false;
+            }, duracao);
         }
         isPlaying = !isPlaying;
     });
