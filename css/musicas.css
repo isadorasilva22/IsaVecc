@@ -2,7 +2,7 @@ body{
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(rgba(180, 120, 220, 0.3), rgba(180, 120, 220, 0.3)),
-    url('../fotos/wallpaper-branco.jpeg');  
+    url('../view/wallpaper-branco.jpeg');  
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,9 +38,13 @@ body{
   }
   
   .conteudo {
-    display: none;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    margin-top: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.3s ease, margin 0.3s ease;
     background: #fffaf5;
-    padding: 20px;
     max-width: 350px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -49,14 +53,18 @@ body{
     color: #4a2f28;
   }
   
+  
   .conteudo img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
   }
-  
+
   .linha-disco.aberto .conteudo {
-    display: block;
+    opacity: 1;
+    max-height: 1000px;
+    padding: 20px;
+    margin-top: 20px;
   }
   
 /* Roda o disco com animação enquanto toca */
