@@ -4,27 +4,36 @@ body {
   padding: 20px;
   width: 100%;
   min-height: 100vh;
-  height: 175vh;
   background: linear-gradient(rgba(180, 120, 220, 0.3), rgba(180, 120, 220, 0.3)),
   url('../view/wallpaper_fatos.webp');  
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .container {
   max-width: 1000px;
+  width:100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  height: 320px;
   background-color: #4B0082;
   background: linear-gradient(135deg,#ffffff, rgb(221, 31, 255));
-  border-radius: 16px;
+  border-radius: 12px;
   box-shadow: 0 4px 10px rgba(58,0,102,0.4);
   overflow: hidden;
   margin-bottom: 40px;
@@ -42,27 +51,22 @@ body {
 }
 
 .card img {
-  width: 300px;
-  height: auto;
+  width: 30%;
+  height: 100%;
   object-fit: cover;
 }
 
 .card-texto {
-  padding: 20px 30px;
+  text-align: center;
+  padding: 0 20px;
   color: #4b2673;
   flex: 1;
 }
 
 .card-texto h2 {
   color: #4B0082;
-  margin-top: 0;
+  margin: 0;
   font-size: 24px;
-}
-
-.card-texto p {
-  color: #3A0066;
-  font-size: 16px;
-  line-height: 1.6;
 }
 
 @media (max-width: 768px) {
@@ -71,7 +75,9 @@ body {
   }
 
   .card img {
-    width: 100%;
+    width: 100%; /* Largura 100% da tela */
+    height: 200px; /* Definindo altura fixa também em telas pequenas */
+    object-fit: cover; /* Mantém a cobertura da imagem */
   }
 
   .card-texto {
