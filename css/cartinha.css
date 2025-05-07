@@ -1,49 +1,89 @@
 *{
   margin:0;
-  padding: 0px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body{
   width: 100%;
-  height: 175vh;
+  height: 100vh;
   background: linear-gradient(rgba(180, 120, 220, 0.3), rgba(180, 120, 220, 0.3)),
   url('../view/wallpaper-roxo.jpeg');  
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  display:flex;
-  align-items: center;
-  justify-content: center;
+  padding: 20px;
 }
 
 .container{
   max-width: 1280px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .carta {
   background-color: rgba(200, 160, 255, 0.3);
-  opacity: 85%;
+  opacity: 0.85;
+  width:100%;
   max-width: 600px;
-  padding: 50px;
+  padding: 40px 30px;
   border-radius: 20px;
   color: navy;
   font-family: 'Georgia', serif;
   line-height: 1.6;
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  backdrop-filter: blur(5px);
 }
 
 .carta h1 {
   text-align: center;
   margin-bottom: 30px;
+  font-size: 1.8em;
 }
 
 .carta p {
   margin-bottom: 20px;
   text-align: justify;
+  font-size: 1em;
 }
 
 .carta .assinatura {
   text-align: right;
   font-style: italic;
+  font-size: 0.95em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .carta {
+    padding: 30px 20px;
+  }
+
+  .carta h1 {
+    font-size: 1.5em;
+  }
+
+  .carta p,
+  .carta .assinatura {
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 480px) {
+  .carta {
+    padding: 20px 15px;
+  }
+
+  .carta h1 {
+    font-size: 1.3em;
+  }
+
+  .carta p,
+  .carta .assinatura {
+    font-size: 0.9em;
+  }
 }
