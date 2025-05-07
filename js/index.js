@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const playBtn = document.getElementById("playPauseBtn");
-    const audio = document.getElementById("audioPlayer");
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    const audioPlayer = document.getElementById("audioPlayer");
 
     let isPlaying = false;
 
@@ -8,20 +8,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const fim = 90;
     let trechoTimeout;
 
-    playBtn.addEventListener("click", function () {
+    playPauseBtn.addEventListener("click", function () {
         if (isPlaying) {
-            audio.pause();
-            playBtn.textContent = "▶️";
+            audioPlayer.pause();
+            playPauseBtn.textContent = "▶️";
             clearTimeout(trechoTimeout)
         } else {
-            audio.currentTime = inicio;
-            audio.play();
-            playBtn.textContent = "⏸️";
+            audioPlayer.currentTime = inicio;
+            audioPlayer.play();
+            playPauseBtn.textContent = "⏸️";
 
             const duracao = (fim - inicio) * 1000;
             trechoTimeout = setTimeout(() =>{
-              audio.pause();
-              playBtn.textContent = "▶️";
+              audioPlayer.pause();
+              playPauseBtn.textContent = "▶️";
               isPlaying = false;
             }, duracao);
         }

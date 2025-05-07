@@ -2,9 +2,9 @@ body{
     color: black;
     font-family:'Optima';
     margin: 0 auto;
+    display: flex;
     flex-direction: column;
     font-size: 25px;
-    /* background-color: rgb(176, 139, 255); */
 }
 
 header{
@@ -241,3 +241,35 @@ h3{
 .card a {
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+    main {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .music-card {
+      width: 90%;
+      margin: 10px 0;
+    }
+  
+    .album-cover {
+      width: 100%;
+      height: auto;
+    }
+  
+    .polaroids {
+      flex-direction: column;
+      margin: 20px;
+    }
+  
+    h2 {
+      font-size: 36px;
+    }
+  
+    p {
+      font-size: 18px;
+      max-width: 90%;
+    }
+  }
+  
