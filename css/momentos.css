@@ -2,7 +2,7 @@ body {
     font-family: 'Courier New', monospace;
     margin: 0;
     padding: 40px 20px;
-    width: 100%;
+    /* width: 100%; */
     min-height: 100vh;
     background: linear-gradient(rgba(180, 120, 220, 0.3), rgba(180, 120, 220, 0.3)),
     url('../view/teste_borboletas.jpeg');  

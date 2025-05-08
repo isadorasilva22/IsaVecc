@@ -1,5 +1,5 @@
 body{
-    width: 100%;
+    /* width: 100%; */
     min-height: 100vh;
     background: linear-gradient(rgba(180, 120, 220, 0.3), rgba(180, 120, 220, 0.3)),
     url('../view/wallpaper-branco.jpeg');  
