@@ -108,6 +108,39 @@ audio {
     text-align: justify;
 }
 
+@media (max-width: 768px) {
+    .flex-linha {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bloco_texto {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .bloco_texto h2{
+        font-size: 24px;
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    .bloco_texto h4 {
+        font-size: 18px;
+    }
+    
+    .music-card {
+        margin-top: 20px;
+        margin-left: 0;
+        width: 90%;
+    }
+
+    .album-cover {
+        width: 100%;
+        height: auto;
+    }
+}
+
 .polaroids{
     display: flex;
     flex-wrap: wrap;
