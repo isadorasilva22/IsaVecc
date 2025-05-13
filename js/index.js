@@ -32,8 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
 function verificarSenha() {
     const senha = prompt("(dica: nosso jeito de falar Te amo)  Digite a senha para acessar:");
     const senhaCorreta = "timamoassim";
+    const senhaCorreta02 = "timamo";
   
-    if (senha === senhaCorreta) {
+    if (senha === senhaCorreta || senha === senhaCorreta02) {
       window.location.href = 'view/cartinha.html'; // substitua pela sua URL
     } else {
       alert("Senha incorreta. Acesso negado.");
